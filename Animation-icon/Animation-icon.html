@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Icon </title>
+    <style>
+body{
+     width: 100%;
+     height: 0px;
+     margin: 0px;
+     padding: 0px;   
+    }
+.fzyHeader{
+    width: auto;
+height: auto;
+margin: 0px 10px 0px 0px;
+padding: 0px;
+background-color: bisque;
+float: right;
+}
+.fzyIcon{
+    display: inline-block;
+    cursor: pointer;
+}
+.fzytopbar, .fzymidbar, .fzydwnbar{
+width: 35px;
+height: 6px;
+background-color: #000;
+margin: 5px 10px;
+transition: 0.4s;
+}
+.change .fzytopbar{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .fzymidbar{opacity: 0;}
+ .change .fzydwnbar{
+     -webkit-transform: rotate(45deg) translate(-8px, -8px);
+     transform: rotate(45deg) translate(-8px, -8px);
+ }   
+    </style>
+</head>
+<body>
+    <div class="fzyHeader">
+    <div class="fzyIcon" onclick="fzyiconFunction(this)">
+<div class="fzytopbar"></div>
+<div class="fzymidbar"></div>
+<div class="fzydwnbar"></div>
+</div>
+</div>
+<script>
+    function fzyiconFunction(x) {
+        x.classList.toggle("change")
+    }
+</script>
+</body>
+</html>
